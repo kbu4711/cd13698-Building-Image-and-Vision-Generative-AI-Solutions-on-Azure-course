@@ -2,7 +2,6 @@
 
 import openai
 import constants
-import librosa
 
 # Function to transcribe customer audio complaints using the Whisper model
 
@@ -15,13 +14,21 @@ def transcribe_audio():
     str: The transcribed text of the audio file.
     """
     # Load the audio file.
+    with open("project/audio/message1.mp3", "rb") as mp3: 
+         data = mp3.read()  # Read the audio file data 
+
     
+# from openai import OpenAI
+#client = OpenAI()
 
+#with open("audio.mp3", "rb") as f:
+#    transcription = client.audio.transcriptions.create(
+#        model="gpt-4o-transcribe",
+#        file=f,
+#        response_format="text"
+#    )
 
-    audio, sample_rate = librosa.load("audio/message1.mp3", sr=None)
-    print("load")
-    print(audio)
-    print(sample_rate)
+#print(transcription)
 
 
     # TODO: Call the Whisper model to transcribe the audio file.
