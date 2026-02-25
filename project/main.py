@@ -1,5 +1,7 @@
 # main.py
 
+
+
 # Import functions from other modules
 from whisper import transcribe_audio
 from dalle import generate_image
@@ -25,6 +27,7 @@ def main():
     None
     """
     # TODO: Call the function to transcribe the audio complaint.
+    transcribe_audio
 
     # TODO: Create a prompt from the transcription.
 
